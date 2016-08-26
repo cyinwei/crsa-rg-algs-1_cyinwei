@@ -14,7 +14,13 @@ def count_split_inv_and_sort(left, right):
     """
     **Key Function.***
     Counts the number of inversions between two *sorted* lists on the left
-    and right side.  
+    and right side.
+
+    An inversion happens whenever the right side is LESS THAN the left side.
+    If the left side is full, then there aren't inversions either.
+
+    Note: this is the only place where we actually count inversions.  
+    
     """    
     sorted_arr = [None] * (len(left) + len(right))
     inv = 0
